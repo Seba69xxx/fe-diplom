@@ -1,0 +1,387 @@
+@import '../../styles/variables';
+
+.card {
+  position: relative;
+  display: flex;
+  min-height: 250px;
+  margin-bottom: 20px;
+  overflow: visible;
+  background: white;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+
+  &:hover {
+    border-color: $color-primary;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  &.compact {
+    min-height: auto;
+    margin-bottom: 0;
+
+    .leftSection {
+      width: 150px;
+      padding: 15px 10px;
+
+      .trainIcon {
+        margin-bottom: 10px;
+        font-size: 40px;
+
+        img {
+          width: 40px;
+        }
+      }
+
+      .trainName {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      .trainRoute .city {
+        font-size: 14px;
+      }
+    }
+
+    .routeSection {
+      gap: 20px;
+      padding: 15px 20px;
+
+      .time {
+        font-size: 20px;
+      }
+
+      .date {
+        font-size: 14px;
+      }
+
+      .cityName {
+        margin-top: 2px;
+        font-size: 16px;
+      }
+
+      .station {
+        font-size: 12px;
+      }
+
+      .durationTime {
+        font-size: 14px;
+      }
+
+      .arrowIcon {
+        width: 20px;
+        height: 12px;
+      }
+    }
+
+    .rightSection {
+      width: 220px;
+      padding: 15px;
+
+      .priceItemHeader {
+        .type {
+          width: auto;
+          margin-right: 5px;
+          font-size: 14px;
+        }
+
+        .cost {
+          font-size: 20px;
+        }
+
+        .rub {
+          font-size: 16px;
+        }
+      }
+
+      .facilities {
+        gap: 8px;
+        margin-bottom: 0;
+
+        .icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 25px 20px;
+  text-align: center;
+  background: #E4E0E9;
+}
+
+.trainIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-size: 60px;
+  color: #3E3C41;
+}
+
+.trainName {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #3E3C41;
+}
+
+.trainRoute {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  font-size: 14px;
+  color: #928F94;
+  text-align: left;
+
+  .routeLine {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 1.2;
+
+    .smallArrow {
+      margin: 0 5px;
+      font-size: 12px;
+      color: #928F94;
+    }
+  }
+
+  .city {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+}
+
+.routeSection {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px 40px;
+}
+
+.routeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.timeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 120px;
+}
+
+.alignRight {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.time {
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: black;
+}
+
+.date {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #928F94;
+}
+
+.cityName {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #292929;
+  text-transform: capitalize;
+}
+
+.station {
+  font-size: 14px;
+  color: #928F94;
+}
+
+.durationBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.durationTime {
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: #C4C4C4;
+}
+
+.arrowIcon {
+  width: 30px;
+  height: 20px;
+  fill: #FFA800;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-between;
+  width: 300px;
+  padding: 20px 30px 20px 20px;
+  border-left: 1px solid #E0E0E0;
+}
+
+.priceList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.priceItemWrapper {
+  position: relative;
+}
+
+.priceItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover .type {
+    color: $color-primary;
+  }
+}
+
+.type {
+  width: 80px;
+  font-size: 16px;
+  color: #333;
+}
+
+.count {
+  width: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFA800;
+  text-align: center;
+}
+
+.priceBlock {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.from {
+  margin-right: 5px;
+  font-size: 12px;
+  color: #928F94;
+}
+
+.cost {
+  font-size: 24px;
+  font-weight: 700;
+  color: #292929;
+}
+
+.rub {
+  margin-left: 5px;
+  font-size: 18px;
+  color: #928F94;
+}
+
+.priceDropdown {
+  position: absolute;
+  top: 100%;
+  right: -10px;
+  left: -10px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  margin-top: 5px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.subPriceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+
+  .subType {
+    color: #333;
+  }
+
+  .subCount {
+    font-weight: 500;
+    color: #FFA800;
+  }
+
+  .subCost {
+    font-weight: 700;
+    color: #292929;
+  }
+}
+
+.facilities {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(88%) sepia(0%) saturate(88%) hue-rotate(186deg) brightness(91%) contrast(93%);
+  transition: 0.3s;
+
+  &:hover {
+    filter: invert(53%) sepia(93%) saturate(1585%) hue-rotate(1deg) brightness(103%) contrast(101%);
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  background: #FFA800;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: #E69500;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}

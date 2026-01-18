@@ -1,0 +1,219 @@
+@import '../../styles/variables';
+
+.coachContainer {
+  background: white;
+  border: 1px solid #C4C4C4;
+  margin-top: 20px;
+  position: relative;
+}
+
+.coachInfo {
+  display: flex;
+  border-bottom: 1px solid #E5E5E5;
+  min-height: 160px;
+}
+
+.coachNumberBlock {
+  background: #FFA800;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+.coachBigNumber {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  color: white;
+}
+
+.coachLabel {
+  font-size: 18px;
+  color: white;
+}
+
+.coachDetails {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px 20px 0;
+}
+
+.detailsColumn {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+}
+
+.detailsColumnRight {
+  @extend .detailsColumn;
+  align-items: flex-end;
+}
+
+.columnTitle {
+  color: #928F94;
+  font-size: 16px;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 40px;
+}
+
+.columnTitleRight {
+  @extend .columnTitle;
+  justify-content: flex-end;
+}
+
+.seatsList {
+  max-height: 120px;
+  overflow-y: auto;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #C4C4C4;
+    border-radius: 2px;
+  }
+}
+
+.seatRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #292929;
+}
+
+.seatInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.seatNum {
+  font-weight: 400;
+}
+
+.seatWagon {
+  font-size: 14px;
+  color: #928F94;
+  margin-top: 2px;
+}
+
+.seatPrice {
+  font-weight: 700;
+}
+
+.emptyText {
+  color: #C4C4C4;
+  font-size: 16px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.org {
+  color: #928F94;
+  opacity: 0.7;
+}
+
+.servicesRow {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.serviceIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  cursor: default;
+
+  img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  &.included {
+    background: #FCD9A1;
+    border: 1px solid #FCD9A1;
+    cursor: not-allowed;
+
+    img {
+      filter: grayscale(100%) opacity(0.5);
+    }
+  }
+
+  &.selected {
+    background: #FFA800;
+    border: 1px solid #FFA800;
+    cursor: pointer;
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &.selectable {
+    background: white;
+    border: 1px solid #292929;
+    cursor: pointer;
+
+    img {
+      filter: none;
+    }
+
+    &:hover {
+      background: #FFA800;
+      border-color: #FFA800;
+
+      img {
+        filter: brightness(0);
+      }
+    }
+  }
+}
+
+.seatsScheme {
+  padding: 40px 60px 40px 60px;
+  background: #F4F3F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.schemeInner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.75);
+  transform-origin: top center;
+  margin-bottom: -60px;
+  margin-top: -10px;
+}
+
+.bottomPriceBar {
+  background: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.finalPrice {
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFA800;
+}

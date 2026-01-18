@@ -1,0 +1,202 @@
+@import '../../styles/variables';
+
+.successPage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  background: #E5E5E5;
+}
+
+.heroSection {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 500px;
+  padding-bottom: 180px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%),
+    url('../../images/background-3.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.heroContainer {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 15px;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.orderCard {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: -150px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.orderNum {
+  font-size: 36px;
+  font-weight: 700;
+  color: #292929;
+}
+
+.orderSum {
+  font-size: 36px;
+  font-weight: 400;
+  color: #928F94;
+
+  span {
+    margin-left: 10px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #292929;
+  }
+}
+
+.stepsBlock {
+  display: flex;
+  justify-content: center;
+  padding: 80px 40px;
+  background: #F4F3F6;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  text-align: center;
+
+  p {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #292929;
+  }
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  background: #FFFFFF;
+  border: 10px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.iconImg {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+
+.messageBlock {
+  padding: 60px 150px;
+  text-align: left;
+}
+
+.nameTitle {
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #292929;
+}
+
+.messageText {
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #292929;
+
+  p {
+    margin: 0;
+  }
+}
+
+.thanksText {
+  font-size: 24px;
+  font-weight: 700;
+  color: #292929;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  background: #FFA800;
+}
+
+.rateBlock {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  span {
+    font-size: 24px;
+    font-weight: 400;
+    color: #292929;
+  }
+}
+
+.starsContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.starIcon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.homeBtn {
+  padding: 15px 50px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #292929;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #292929;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: #FFA800;
+    background: #292929;
+    border-color: #292929;
+  }
+}

@@ -1,0 +1,132 @@
+@import '../../styles/variables';
+
+.footer {
+  padding: 50px 0;
+  color: white;
+  background: $color-secondary;
+  border-top: 1px solid #3E3E3E;
+}
+
+.container {
+  @include container;
+
+  display: block;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.col {
+  width: 45%;
+}
+
+.title {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: white;
+
+  img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+    object-fit: contain;
+  }
+}
+
+.subscribeForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.subInput {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+}
+
+.subButton {
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+  transition: 0.3s;
+
+  &:hover {
+    color: black;
+    background: $color-primary;
+    border-color: $color-primary;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+
+  img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+    object-fit: contain;
+    transition: 0.3s;
+
+    &:hover {
+      filter: invert(53%) sepia(93%) saturate(1585%) hue-rotate(1deg) brightness(103%) contrast(101%);
+    }
+  }
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 30px;
+  font-size: 18px;
+  color: white;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.toTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 50%;
+
+  &:hover {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+}

@@ -1,0 +1,96 @@
+@import '../../styles/variables';
+
+.datepicker {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 15px;
+  margin-top: 5px;
+  color: #292929;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    color: #FFA800;
+  }
+}
+
+.weekDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+  text-align: center;
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #928F94;
+  }
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 2px;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  &:hover {
+    border: 1px solid #FFA800;
+    border-radius: 3px;
+  }
+}
+
+.emptyDay {
+  height: 30px;
+}
+
+.selected {
+  font-weight: 700;
+  background: rgba(255, 168, 0, 0.1);
+  border: 2px solid #FFA800;
+  border-radius: 3px;
+}
+
+.today {
+  font-weight: 700;
+  color: #FFA800;
+}

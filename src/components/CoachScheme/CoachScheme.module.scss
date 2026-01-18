@@ -1,0 +1,388 @@
+@import '../../styles/variables';
+
+$border-color: #858585;
+$w: 2px;
+$thick: 4px;
+$thin: 1px;
+$corridor-bg: #F0F0F0;
+
+$top-h: 62%;
+$corridor-h: 13%;
+$bottom-h: 25%;
+
+@mixin wall-with-center-door {
+  position: relative;
+  border-right: $w solid $border-color;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 33%;
+    height: $w;
+    content: '';
+    background: $border-color;
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 33%;
+    height: $w;
+    content: '';
+    background: $border-color;
+  }
+}
+
+.schemeWrapper {
+  position: relative;
+  display: flex;
+  height: 160px;
+  min-width: 950px;
+  padding: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: $w solid $border-color;
+  border-radius: 15px;
+}
+
+.wagonNose {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+  background: #FFFFFF;
+  border-right: none;
+
+  &.layout-sitting {
+    .noseTop {
+      height: 44%;
+    }
+
+    .noseCorridor {
+      height: 12%;
+    }
+
+    .noseBottom {
+      height: 44%;
+    }
+  }
+}
+
+.noseTop {
+  display: flex;
+  height: $top-h;
+  border-bottom: $w solid $border-color;
+}
+
+.noseCorridor {
+  width: 100%;
+  height: $corridor-h;
+  background: $corridor-bg;
+}
+
+.noseBottom {
+  display: flex;
+  height: $bottom-h;
+}
+
+.techRoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+
+  img {
+    width: 30px;
+    height: 30px;
+    filter: invert(61%) sepia(8%) saturate(276%) hue-rotate(214deg) brightness(91%) contrast(87%);
+    object-fit: contain;
+  }
+}
+
+.toiletLeft {
+  width: 50%;
+  border-right: $w solid $border-color;
+}
+
+.conductor {
+  width: 50%;
+  background: #FFFFFF;
+}
+
+.cafe {
+  width: 40%;
+  border-top: $w solid $border-color;
+  border-right: $w solid $border-color;
+}
+
+.exitArea {
+  width: 40%;
+  background: $corridor-bg;
+  border-top: none;
+  border-right: $w solid $border-color;
+}
+
+.emptySpace {
+  width: 20%;
+  background: #FFFFFF;
+  border-top: $w solid $border-color;
+}
+
+.wagonTail {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  background: #FFFFFF;
+  border-left: none;
+
+  &.layout-sitting {
+    .tailTop {
+      height: 44%;
+    }
+
+    .tailCorridor {
+      height: 12%;
+    }
+
+    .tailBottom {
+      height: 44%;
+    }
+  }
+}
+
+.tailTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $top-h;
+  background: #FFFFFF;
+  border-bottom: $w solid $border-color;
+}
+
+.tailCorridor {
+  height: $corridor-h;
+  background: $corridor-bg;
+}
+
+.tailBottom {
+  display: flex;
+  height: $bottom-h;
+}
+
+.trashArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background: #FFFFFF;
+  border-top: $w solid $border-color;
+  border-right: $w solid $border-color;
+}
+
+.tailExit {
+  width: 50%;
+  background: $corridor-bg;
+  border-top: none;
+}
+
+.mainArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-top: $w solid $border-color;
+  border-right: $thick solid $border-color;
+  border-bottom: $w solid $border-color;
+  border-left: $thick solid $border-color;
+}
+
+.gridStandard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.standardTop {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  height: $top-h;
+}
+
+.standardCorridor {
+  width: 100%;
+  height: $corridor-h;
+  background: $corridor-bg;
+  border-top: 1px solid #ddd;
+}
+
+.standardBottom {
+  display: flex;
+  height: $bottom-h;
+  background: #FFF;
+  border-top: $w solid $border-color;
+}
+
+.plackartBottom {
+  display: flex;
+  height: $bottom-h;
+  background: #FFF;
+  border-top: 1px solid #C4C4C4;
+}
+
+.kupeBlock,
+.plackartBlock,
+.luxBlock {
+  @include wall-with-center-door;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.luxBlock {
+  flex-direction: row;
+  align-items: center;
+  padding: 0 2px;
+}
+
+.plackartSideContainer {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  width: 100%;
+}
+
+.sideBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 5px;
+  background: #FFFFFF;
+  border-right: $w solid $border-color;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.gridSitting {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sittingTopHalf {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 44%;
+  padding-bottom: 2px;
+  border-bottom: $w solid $border-color;
+}
+
+.sittingAisle {
+  height: 12%;
+  background: $corridor-bg;
+}
+
+.sittingBottomHalf {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 44%;
+  padding-top: 2px;
+  border-top: $w solid $border-color;
+}
+
+.sittingPairVertical {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.seatRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.seat {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  background: #C4C4C4;
+  border: $thin solid #999;
+  border-radius: 4px;
+  transition: 0.2s;
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    width: 20px;
+    height: 4px;
+    content: '';
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+  }
+
+  &.available {
+    color: #292929;
+    background: #FFFFFF;
+    border-color: #999;
+
+    &::after {
+      background: #eee;
+    }
+
+    &:hover {
+      color: white;
+      background: #FFA800;
+      border-color: #FFA800;
+
+      &::after {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  &.selected {
+    color: white;
+    background: #FFA800;
+    border-color: #FFA800;
+
+    &::after {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &.taken {
+    color: #AAA;
+    cursor: not-allowed;
+    background: #E0E0E0;
+    border-color: #ccc;
+
+    &::after {
+      display: none;
+    }
+  }
+}

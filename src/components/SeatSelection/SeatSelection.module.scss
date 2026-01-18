@@ -1,0 +1,393 @@
+@import '../../styles/variables';
+
+.page {
+  @include container;
+
+  width: 100%;
+  padding-top: 0;
+  padding-right: 75px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.mainTitle {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #292929;
+  text-transform: uppercase;
+}
+
+.topButtons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.backArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background: #FFA800;
+  border: 1px solid #FFA800;
+  border-radius: 0;
+  transition: all 0.3s;
+
+  svg {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background: #E69500;
+    border-color: #E69500;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.btnWhite {
+  height: 60px;
+  padding: 0 30px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: white;
+  border: 1px solid #292929;
+  transition: all 0.3s;
+
+  &:hover {
+    color: white;
+    background: #FFA800;
+    border-color: #FFA800;
+  }
+}
+
+.trainBlock {
+  width: 100%;
+  max-width: 870px;
+  margin-bottom: 40px;
+  background: white;
+  border: 1px solid #C4C4C4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.routeBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px;
+  background: #F7F6F6;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.trainInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .iconTrain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #FFA800;
+    border-radius: 50%;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  .trainText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #292929;
+  }
+
+  .cities {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #292929;
+  }
+}
+
+.routeTimes {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  .timeItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .time {
+    font-size: 24px;
+    font-weight: 700;
+    color: #292929;
+  }
+
+  .date {
+    margin: 2px 0;
+    font-size: 18px;
+    color: #928F94;
+  }
+
+  .city {
+    font-size: 18px;
+    font-weight: 500;
+    color: #292929;
+  }
+
+  .station {
+    font-size: 16px;
+    color: #928F94;
+  }
+
+  .arrowCenter {
+    display: flex;
+    align-items: center;
+    margin-top: -30px;
+  }
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  .clockIcon {
+    width: 30px;
+    filter: invert(66%) sepia(87%) saturate(3036%) hue-rotate(1deg) brightness(101%) contrast(106%);
+  }
+
+  .durationText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    span {
+      font-size: 18px;
+      line-height: 1.2;
+      color: #C4C4C4;
+    }
+  }
+}
+
+.passengersSection {
+  padding: 30px;
+  background: white;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.sectionTitle {
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #292929;
+}
+
+.inputsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 40px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 18px;
+  background: white;
+  border: 1px solid #928F94;
+  border-radius: 5px;
+
+  input {
+    width: 50px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #292929;
+    text-align: center;
+    border: none;
+    outline: none;
+  }
+}
+
+.subText {
+  min-height: 45px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #928F94;
+}
+
+.typeSection {
+  padding: 30px;
+  background: white;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.typeIcons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 150px;
+  width: 100%;
+}
+
+.typeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+
+  .iconWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      filter: grayscale(100%) opacity(0.4);
+      object-fit: contain;
+      transition: filter 0.3s ease;
+    }
+  }
+
+  span {
+    font-size: 24px;
+    font-weight: 400;
+    color: #928F94;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    span {
+      color: #FFA800;
+    }
+
+    .iconWrap img {
+      opacity: 1;
+      filter: invert(74%) sepia(61%) saturate(2224%) hue-rotate(359deg) brightness(102%) contrast(106%);
+    }
+  }
+
+  &.active {
+    span {
+      font-weight: 700;
+      color: #FFA800;
+    }
+
+    .iconWrap img {
+      opacity: 1;
+      filter: invert(74%) sepia(61%) saturate(2224%) hue-rotate(359deg) brightness(102%) contrast(106%);
+    }
+  }
+}
+
+.coachWrapper {
+  padding: 30px;
+}
+
+.coachNumbers {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .label {
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .num {
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &.active {
+      color: white;
+      background-color: #FFA800;
+      border-radius: 4px;
+    }
+
+    &:not(.active) {
+      color: #292929;
+
+      &:hover {
+        color: #FFA800;
+      }
+    }
+  }
+
+  .note {
+    margin-left: auto;
+    font-size: 16px;
+    color: #928F94;
+  }
+}
+
+.noData {
+  padding: 30px;
+  font-size: 24px;
+  color: #928F94;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 870px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.nextBtn {
+  padding: 15px 60px;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  background: #FFA800;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover:not(:disabled) {
+    background: #E69500;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &:disabled {
+    cursor: default;
+    background: #928F94;
+  }
+}
