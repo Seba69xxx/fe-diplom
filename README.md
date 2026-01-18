@@ -1,13 +1,13 @@
 # 🚆 Сервис бронирования Ж/Д билетов
 
-![Build Status](https://github.com/ВАШ_НИК/fe-diplom/actions/workflows/pages/pages-build-deployment/badge.svg)
+![Build Status](https://github.com/Seba69xxx/fe-diplom/actions/workflows/pages/pages-build-deployment/badge.svg)
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
 ![Redux Toolkit](https://img.shields.io/badge/Redux-764ABC?style=flat&logo=redux&logoColor=white)
 
 Дипломный проект, представляющий собой веб-приложение для поиска, выбора мест и покупки билетов на поезда.
 
 ### 🚀 Демо версия
-**[Открыть приложение на GitHub Pages](https://ВАШ_НИК.github.io/fe-diplom/)**
+**[Открыть приложение на GitHub Pages](https://seba69xxx.github.io/fe-diplom/)**
 
 ---
 
