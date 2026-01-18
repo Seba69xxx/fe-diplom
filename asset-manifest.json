@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/fe-diplom/static/css/main.f6334828.css",
+    "main.js": "/fe-diplom/static/js/main.6fc666f1.js",
+    "static/media/background-3.png": "/fe-diplom/static/media/background-3.37330d37f302fe7783a4.png",
+    "static/media/background.png": "/fe-diplom/static/media/background.5df5a5ee42211c11e475.png",
+    "static/media/background-how.png": "/fe-diplom/static/media/background-how.45d50c28dac4d8139e4c.png",
+    "static/media/background-ticket.png": "/fe-diplom/static/media/background-ticket.3d63af38a2d3e96f88ba.png",
+    "static/media/avatar-2.png": "/fe-diplom/static/media/avatar-2.28c38bf3e4b72a8adb02.png",
+    "static/media/avatar-1.png": "/fe-diplom/static/media/avatar-1.8b80aee1445623426e23.png",
+    "static/media/skype.png": "/fe-diplom/static/media/skype.43d4fffd733007347355.png",
+    "static/media/phone.png": "/fe-diplom/static/media/phone.bc0bb3e15364c2c4cfa6.png",
+    "index.html": "/fe-diplom/index.html",
+    "main.f6334828.css.map": "/fe-diplom/static/css/main.f6334828.css.map",
+    "main.6fc666f1.js.map": "/fe-diplom/static/js/main.6fc666f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6334828.css",
+    "static/js/main.6fc666f1.js"
+  ]
+}
