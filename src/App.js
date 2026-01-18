@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Main from './pages/Main/Main';
@@ -9,7 +9,7 @@ import './index.scss';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app" id="top">
         <Header />
         <Routes>
@@ -19,7 +19,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
